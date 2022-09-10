@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPB Remscheiid</title>
+  <meta name="description" content="Internetpräsenz der Mädelschaft Sturmvögel und der Jungenschaft Hohenstaufen des DPB in Remscheid">
+  <style>
+    :root {
+      box-sizing: border-box;
+      font-family: sans-serif, system-ui;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    :root {
+      --background: white;
+      --text-color: black;
+      --accent-color: rgba(0, 0, 199, 0.69);
+      --text-on-accent: white;
+      --text-light: gray;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: rgb(28, 28, 34);
+        --text-color: white;
+        --accent-color: rgb(104, 104, 247);
+        --text-on-accent: rgb(255, 255, 255);
+        --text-light: lightgray;
+      }
+    }
+
+    * {
+      line-height: 1.5em;
+    }
+
+    a:link:not(.call-to-action) {
+      color: var(--text-color);
+    }
+
+    a:visited:not(.call-to-action) {
+      color: var(--text-light);
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text-color);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header img {
+      max-height: 400px;
+      max-width: 100%;
+    }
+
+    main {
+      margin: 0 16px;
+      max-width: 840px;
+    }
+
+    li {
+      list-style: none;
+      white-space: pre-line;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row * {
+      flex-grow: 1;
+      flex-basis: 400px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .call-to-action {
+      display: block;
+      width: fit-content;
+      text-decoration: none;
+      font-weight: bold;
+
+      padding: 8px 16px;
+
+      color: var(--text-on-accent);
+      background-color: var(--accent-color);
+
+      border-radius: 1000px;
+    }
+
+    footer {
+      color: var(--text-light);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <picture>
+      <source srcset="assets/header.webp" type="image/webp">
+      <img src="assets/header.jpeg"
+      width="100%"
+      alt="Ein nebelverhangenes Tal vor dem ein Pfadfinder steht und über seine Schulter zurück zur Kamera blickt." />
+    </picture>
+    
+  </header>
+  <main class="container">
+    <h1>Deutscher Pfadfinderbund in Remscheid</h1>
+    <p>
+      Herzlich willkommen auf den Internetseiten des Deutschen Pfadfinderbundes in Remscheid.
+    </p>
+    <p>
+      Wir sind Teil des <a href="https://deutscher-pfadfinderbund.de">Deutschen Pfadfinderbundes</a>.
+    </p>
+    <p>
+      Unsere Gruppenstunden finden in der Regel an einen der aufgeführten Orte statt. Irrtümer zu Ort und Zeit sind
+      uns vorbehalten und wir empfehlen daher ausdrücklich uns vorher mit uns in Verbindung zu setzen, um die korrekten
+      Daten zu erfragen.
+    </p>
+
+    <div>
+      <a class="call-to-action" 
+      style="margin: auto;"
+      href="mailto:kontakt@dpb-remscheid.de">Kontaktieren Sie uns</a>
+      <p>
+        Schicken Sie Ihre Kinder vorbei und lassen Sie sie völlig unverbindlich und kostenfrei einfach mal einen Blick
+        in
+        eine unserer Gruppenstunden werfen.
+      </p>
+    </div>
+
+    <div class="row">
+      <section id="maedchen">
+        <h2>Gruppen für Mädchen</h2>
+        <ul>
+          <li>
+            Alter: 11 - 14 Jahre
+            Zeit: Donnerstags, 18:30 - 20:00 Uhr
+            Treffpunkt: <a href="https://www.google.com/maps/place/RS-G%C3%BCldenwerth+Bf/@51.1678124,7.1652749,16.73z">Güldenwerth Bahnhof</a>
+            Ort: <a href="https://www.google.com/maps/place/Diederichskotten/@51.1663271,7.1684453,19z">Diedrichskotten</a>
+            Bei Sarah
+          </li>
+          <li>
+            Alter: 6–10 Jahre
+            Zeit: Donnerstags, 17:30-19:00 Uhr
+            Treffpunkt: <a href="https://www.google.com/maps/place/RS-G%C3%BCldenwerth+Bf/@51.1678124,7.1652749,16.73z">Güldenwerth Bahnhof</a>
+            Ort: <a href="https://www.google.com/maps/place/Diederichskotten/@51.1663271,7.1684453,19z">Diedrichskotten</a>
+            Bei Lilly
+          </li>
+        </ul>
+      </section>
+      <section id="jungen">
+        <h2>Gruppen für Jungen</h2>
+        <ul>
+          <li>
+            Alter: 8 – 10 Jahre
+            Zeit: Montags, 17:30 – 19:00 Uhr
+            Ort: <a href="https://www.google.com/maps/place/Blumen+R%C3%B6ttger+GbR/@51.1933201,7.1690058,19.48z">Hasten, überm Ladenlokal „Blumen Röttger“, Hastener Str. 67</a>
+            Bei Nils
+          </li>
+          <li>
+            Alter: 9–11 Jahre
+            Zeit: Donnerstags, 18:00 – 19:30 Uhr
+            Ort: <a href="https://www.google.com/maps/place/Fischerh%C3%BCtte/@51.158876,7.1628365,21z">Fischerhütte</a>
+            Bei Bobo
+          </li>
+          <li>
+            Alter: 10–12 Jahre
+            Zeit: Donnerstags, 18:00-19:30 Uhr
+            Ort: <a href="https://www.google.com/maps/place/Blumen+R%C3%B6ttger+GbR/@51.1933201,7.1690058,19.48z">Hasten, überm Ladenlokal „Blumen Röttger“, Hastener Str. 67</a>
+            Bei Zachi
+          </li>
+          <li>
+            Alter: 8 – 11 Jahre
+            Zeit: Dienstags, 18 – 19:30 Uhr
+            Treffpunkt: <a href="https://www.google.com/maps/place/RS-G%C3%BCldenwerth+Bf/@51.1678124,7.1652749,16.73z">Güldenwerth Bahnhof</a>
+            Ort: <a href="https://www.google.com/maps/place/Diederichskotten/@51.1663271,7.1684453,19z">Diedrichskotten</a>
+            Bei Silas
+          </li>
+        </ul>
+      </section>
+    </div>
+    <p>
+      Bei weiteren Fragen: Einfach eine E-Mail an <a
+        href="mailto:kontakt@dpb-remscheid.de">kontakt@dpb-remscheid.de</a> schicken!
+    </p>
+
+  </main>
+
+  <footer>
+    Copyright © 2022 Deutscher Pfadfinderbund Remscheid
+  </footer>
+</body>
+
+</html>
