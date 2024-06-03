@@ -21,6 +21,7 @@
       --accent-color: rgba(0, 0, 199, 0.69);
       --text-on-accent: white;
       --text-light: gray;
+      accent-color: var(--accent-color);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -30,11 +31,13 @@
         --accent-color: rgb(104, 104, 247);
         --text-on-accent: rgb(255, 255, 255);
         --text-light: lightgray;
+        accent-color: var(--accent-color);
       }
     }
 
     * {
       line-height: 1.5em;
+      text-wrap: pretty;
     }
 
     a:link:not(.call-to-action) {
@@ -64,23 +67,24 @@
       max-width: 840px;
     }
 
+    ul {
+      padding: 0;
+    }
+
     li {
       list-style: none;
-      white-space: pre-line;
+      margin-block-end: 1em;
     }
 
     .row {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      justify-content: space-evenly;
+      column-gap: 1em;
+      grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
     }
 
-    .row * {
-      flex-grow: 1;
-      flex-basis: 400px;
-    }
-
-    h2 {
-      text-align: center;
+    .row>* {
+      flex-basis: 350px;
     }
 
     .call-to-action {
@@ -89,18 +93,34 @@
       text-decoration: none;
       font-weight: bold;
 
-      padding: 8px 16px;
+      padding: 0.5em 1em;
 
       color: var(--text-on-accent);
       background-color: var(--accent-color);
 
-      border-radius: 1000px;
+      border-radius: 2em;
     }
 
     footer {
       margin-top: 1rem;
       margin-bottom: 2rem;
       color: var(--text-light);
+    }
+
+    table {
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    td,
+    th {
+      padding: 0;
+      vertical-align: top;
+    }
+
+    th {
+      padding-inline-end: 1em;
+      font-weight: unset;
     }
   </style>
 </head>
@@ -149,24 +169,69 @@
         <h2>Gruppen für Jungen</h2>
         <ul>
           <li>
-            <b>Neue Gruppe ab dem 17.04.2024!</b>
-            Alter: 7 - 10 Jahre
-            Zeit: Mittwochs, 16:30-18:00 Uhr
-            Ort: <a href="https://www.google.com/maps/place/Diederichskotten/@51.1663271,7.1684453,19z">Diedrichskotten</a>
-            Treffpunkt: <a href="https://www.google.com/maps/place/RS-G%C3%BCldenwerth+Bf/@51.1678124,7.1652749,16.73z">Güldenwerth Bahnhof</a>
-            Bei Marten und Liam
+            <article>
+              Bei Marten und Liam
+              <table>
+                <tr>
+                  <th scope="row">Alter</th>
+                  <td>7 – 10 Jahre</td>
+                </tr>
+                <tr>
+                  <th scope="row">Zeit</th>
+                  <td>Mittwochs, 16:30 – 18:00 Uhr</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ort</th>
+                  <td><a href="https://google.com/maps/place/Diederichskotten/@51.1663271,7.1684453,19z">Diedrichskotten</a>
+                    <br>Treffpunkt 
+                      <a href="https://google.com/maps/place/RS-G%C3%BCldenwerth+Bf/@51.1678124,7.1652749,16.73z">Güldenwerth
+                      Bahnhof</a>
+                  </td>
+                </tr>
+              </table>
+              </article>
           </li>
+
           <li>
-            Alter: 9 - 11 Jahre
-            Zeit: Montags, 18:00 – 19:30 Uhr
-            Ort: <a href="https://www.google.com/maps/place/Blumen+R%C3%B6ttger+GbR/@51.1933201,7.1690058,19.48z">Hasten, überm Ladenlokal „Blumen Röttger“, Hastener Str. 67</a>
-            Bei Nils
+            <article>
+              Bei Nils
+              <table>
+                <tr>
+                  <th scope="row">Alter</th>
+                  <td>9 – 11 Jahre</td>
+                </tr>
+                <tr>
+                  <th scope="row">Zeit</th>
+                  <td>Montags, 18:00 – 19:30 Uhr</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ort</th>
+                  <td><a href="https://google.com/maps/place/Blumen+R%C3%B6ttger+GbR/@51.1933201,7.1690058,19.48z">Hasten,
+                      überm Ladenlokal „Blumen Röttger“, Hastener Str. 67</a>
+                </tr>
+              </table>
+              </article>
           </li>
+
           <li>
-            Alter: 12 - 14 Jahre
-            Zeit: Donnerstags, 18:00 – 19:30 Uhr
-            Ort: <a href="https://www.google.com/maps/place/Fischerh%C3%BCtte/@51.158876,7.1628365,21z">Fischerhütte</a>
-            Bei Bobo
+            <article>
+              Bei Bobo
+              <table>
+                <tr>
+                  <th scope="row">Alter</th>
+                  <td>12 – 14 Jahre</td>
+                </tr>
+                <tr>
+                  <th scope="row">Zeit</th>
+                  <td>Donnerstags, 18:00 – 19:30 Uhr</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ort</th>
+                  <td><a href="https://google.com/maps/place/Fischerh%C3%BCtte/@51.158876,7.1628365,21z">Fischerhütte</a>
+                  </td>
+                </tr>
+              </table>
+              </article>
           </li>
 
         </ul>
@@ -180,8 +245,7 @@
   </main>
 
   <footer>
-    
-    © 2023 Deutscher Pfadfinderbund in Remscheid
+    © 2024 Deutscher Pfadfinderbund in Remscheid
   </footer>
 </body>
 
